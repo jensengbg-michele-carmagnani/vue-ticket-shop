@@ -1,5 +1,5 @@
 <template>
-  <section id="display-ticket" v-if="infoEvent.name">
+  <section id="display-ticket" >
         <p class="message">You are about to score <br> some tickets to</p>
         <p class="name">name:{{infoEvent.name}}</p>
         <span class="time">time:{{infoEvent.timeIn}}</span>
@@ -13,13 +13,15 @@
 <script>
 export default {
   name:'InfoTicket',
+  props:{
+    allEvents:Array
+  },
  
   computed: {
      infoEvent(){
-      //  return this.$store.getters.ticket(this.$route.params.id)
-      return this.$store.state.allEvents.filter((event) => event.id === (this.$route.params.id))
+          return this.allEvents.filter(event => event.id == this.$route.params.id)[0]
 
-     },
+     }, 
   },
     methods: {
      

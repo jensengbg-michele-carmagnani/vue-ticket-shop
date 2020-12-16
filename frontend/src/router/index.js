@@ -14,17 +14,17 @@ const routes = [
   {
     path: "/allevents",
     name: "AllEvents",
-    component: () => import("../views/AllEvents.vue"),
+    component: () => import("@/views/AllEvents.vue"),
   },
   {
-    path: "/infoTicket/:id",
+    path: "/allevents/:id",
     name: "InfoTicket",
-    component: () => import("../views/InfoTicket.vue"),
+    component: () => import("@/views/InfoTicket.vue"),
   },
   {
     path:"/ticket",
     name:"Ticket",
-    component:() =>import('../views/Ticket.vue')
+    component:() =>import('@/views/Ticket.vue')
   }
 ];
 

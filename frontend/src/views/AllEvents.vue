@@ -10,13 +10,16 @@
 import Event from "@/components/Event";
 export default {
   name: 'AllEvents',
+  props:{
+    allEvents:Array
+  },
   components: {
     Event,
   },
   computed: {
-    allEvents(){
-    return this.$store.state.allEvents
-  }
+  //   allEvents(){
+  //   return this.$store.state.allEvents
+  // }
   },
   methods: {
 

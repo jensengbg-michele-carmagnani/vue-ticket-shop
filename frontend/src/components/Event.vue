@@ -1,5 +1,5 @@
 <template>
-  <article id="info" @click.prevent="goTo(singleEvent.id)">
+  <article id="info" @click="goTo(singleEvent.id)">
     
         
         <p class="name">Singer {{singleEvent.name}}</p>
@@ -23,7 +23,7 @@ export default {
 
 methods: {
  goTo(id){
-  this.$router.push(`/infoTicket/${id}`)
+  this.$router.push(`/allevents/${id}`)
 
 },
 

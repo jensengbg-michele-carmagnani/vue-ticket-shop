@@ -4,7 +4,7 @@
           <router-link to="/">Home</router-link>|
       <router-link to="/allevents">Concert </router-link>
     </div>
-    <router-view/>
+    <router-view :allEvents="allEvents"/>
   </div>
 </template>
 <script>
@@ -13,6 +13,11 @@ export default {
 
   beforeMount() {
     this.$store.dispatch('fetchEvents')
+  },
+  computed: {
+    allEvents(){
+    return this.$store.state.allEvents
+  }
   },
 }
 </script>
