@@ -22,10 +22,10 @@ const routes = [
     component: () => import("@/views/InfoTicket.vue"),
   },
   {
-    path:"/ticket",
-    name:"Ticket",
-    component:() =>import('@/views/Ticket.vue')
-  }
+    path: "/ticket",
+    name: "Ticket",
+    component: () => import("@/views/Ticket.vue"),
+  },
 ];
 
 const router = new VueRouter({

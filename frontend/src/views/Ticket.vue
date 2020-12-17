@@ -1,11 +1,12 @@
 <template>
   <section class="ticket">  
      <p class="message">You are about to score <br> some tickets to</p>
-        <p class="name">name:{{getTicket.name}}</p>
-        <span class="time">time:{{getTicket.time}}</span>
-        <p class="location">@{{getTicket.location}}</p>
-        <p class="price">€{{getTicket.price}}</p>
-        <p class="price">€{{getTicket.ticketNumber}}</p>
+        <p class="name">name:{{ticket.name}}</p>
+        <p class="time">time:{{ticket.time}}</p>
+        <p class="location">@{{ticket.location}}</p>
+        <p class="price">€{{ticket.price}}</p>
+        <p class="price">date prochouse: {{ticket.date}}</p>
+        <p class="ticket-number">ticket number: {{ticket.ticketNumber}}</p>
       <button class="goBack" @click="goBack()">goBack</button>
 
 
@@ -15,14 +16,18 @@
 <script>
 export default {
   name:"ticket",
- 
+
   computed: {
-    getTicket(){
-     return this.$store.getters.ticket
+    ticket(){
+      return this.$store.getters.ticket
+    
     }
   },
   methods: {
+  
+
     goBack(){
+      this.$store.commit('cleanTicket')
       this.$router.push('/allevents')
       
     },

@@ -5,7 +5,7 @@
         <span class="time">time:{{infoEvent.timeIn}}</span>
         <p class="location">@{{infoEvent.location}}</p>
         <p class="price">€{{infoEvent.price}}</p>
-         <button class="buy-ticket" id="buy" @click.prevent="goToTicket()">Buy it</button>
+         <button class="buy-ticket" id="buy" @click="buyTicket(infoEvent)">Buy it</button>
 
   </section>
 </template>
@@ -16,22 +16,27 @@ export default {
   props:{
     allEvents:Array
   },
- 
+  
+  
   computed: {
      infoEvent(){
-          return this.allEvents.filter(event => event.id == this.$route.params.id)[0]
+       
+    return this.allEvents.filter(event => event.id == this.$route.params.id)[0] 
+       
 
      }, 
   },
     methods: {
      
 
-      goToTicket(){
-        this.$router.push('/ticket')
-        this.setTicket(this.ticket)
+      buyTicket(data){
+        this.setTicket(data),
+        this.$router.push(`/ticket`)
+
+        
       },
-      setTicket(){
-        this.$store.dispatch('buyTicket')
+      setTicket(ticket){
+        this.$store.dispatch('buyTicket',ticket)
       }
     }
 }

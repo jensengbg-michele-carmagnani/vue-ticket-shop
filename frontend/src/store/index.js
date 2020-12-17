@@ -8,18 +8,18 @@ export default new Vuex.Store({
   state: {
     url: "http://localhost:3000",
     allEvents: Array,
-    ticket: Object,
+    ticketObj: Object,
   },
   mutations: {
     showEvents(state, data) {
       state.allEvents = data;
     },
     setTicket(state, ticket) {
-      state.ticket = ticket;
-      console.log("ticket in setTicket", state.ticket);
+      state.ticketObj = ticket.data;
+      console.log("ticket in setTicket obj", ticket.data);
     },
     cleanTicket(state) {
-      state.ticket = {};
+      state.ticketObj = {};
     },
   },
   actions: {
@@ -35,7 +35,7 @@ export default new Vuex.Store({
     async buyTicket(ctx, data) {
       try {
         let ticket = await ax.post(`${ctx.state.url}/ticket`, data);
-        console.log("info ticket  ", data);
+        console.log(" info ticket to buy  ", data);
         ctx.commit("setTicket", ticket);
       } catch (error) {
         console.log("Error form db ticket", error);
@@ -45,12 +45,13 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     ticket(state) {
-      (id) => {
-        return state.allEvents.filter((event) => event.id === id)[0];
-      };
+      return state.ticketObj
     },
     concertsCount(state) {
       return state.allEvents.length;
+    },
+    ticketNumber(state) {
+      return state.ticketObj;
     },
   },
 });

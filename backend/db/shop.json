@@ -99,34 +99,14 @@
   "stuff": [],
   "tickets": [
     {
-      "ticketNumber": "f530559c-56fd-4cec-930e-b2d818366d41"
-    },
-    {
-      "ticketNumber": "05b2c348-c7ed-4a19-93c1-60fcc76efbe6"
-    },
-    {
-      "ticketNumber": "ace76455-a0f5-48b2-8e06-1af77b9a805b"
-    },
-    {
-      "ticketNumber": "27624a0e-5447-4a59-8086-1244a5e30c01"
-    },
-    {
-      "ticketNumber": "97739430-9f8a-4d00-aeab-e77cdcccae47"
-    },
-    {
-      "ticketNumber": "6cbf1bf4-1ebc-4c17-a129-515ec9feeacc"
-    },
-    {
-      "ticketNumber": "64f62f91-1397-4f9a-8670-5c2740be2a51"
-    },
-    {
-      "ticketNumber": "8087cd9f-05e6-4cd8-9301-05fb4abb46c2"
-    },
-    {
-      "ticketNumber": "1ca06f28-46df-4730-87ed-99b6c906b959"
-    },
-    {
-      "ticketNumber": "ad4bf9b0-d3b3-4036-a51c-df27cee44ed9"
+      "name": "Vasco Rossi",
+      "location": "verona",
+      "date": "Nov 11",
+      "from": "20",
+      "to": "23",
+      "price": "150€",
+      "data": "2020-12-17",
+      "ticketNumber": "daba0f36-f657-4e87-abe5-161cf0ec468a"
     }
   ]
 }
