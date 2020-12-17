@@ -17,9 +17,7 @@ export default {
     Event,
   },
   computed: {
-  //   allEvents(){
-  //   return this.$store.state.allEvents
-  // }
+ 
   },
   methods: {
 
