@@ -1,5 +1,5 @@
 <template>
-  <section id="display-ticket" >
+  <section id="info-ticket" >
         <p class="message">You are about to score <br> some tickets to</p>
         <p class="name">name:{{infoEvent.name}}</p>
         <span class="time">time:{{infoEvent.timeIn}}</span>
