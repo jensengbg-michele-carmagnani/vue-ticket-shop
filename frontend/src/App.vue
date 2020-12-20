@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/allevents">Concert </router-link>
+      <!-- <router-link to="/">Home</router-link>|
+      <router-link to="/allevents">Concert </router-link> -->
     </div>
     <router-view :allEvents="allEvents"/>
   </div>

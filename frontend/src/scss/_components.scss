@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 
   padding: 0.5rem 0.7rem;
   width: 400px;
@@ -13,18 +12,15 @@
   }
   .info {
     width: 60%;
-    &:last-child{
-      border-bottom:1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: .3rem;
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 0.3rem;
     }
-   
-    .position{
-      margin: .2rem;
-      
+    .position {
+      margin: 0.2rem;
     }
-   
-    }
-  
+  }
+
   .position {
     display: flex;
     justify-content: space-between;

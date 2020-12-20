@@ -1,28 +1,193 @@
 @import "./variables";
 @import "./components";
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap");
+body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
-  background-color: #231F42;
-  color:#fff;
-  ;
-  
-  #app{
+  font-family: "Lato", sans-serif;
+  background-color: #231f42;
+  color: #fff;
+  #app {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-    
-  
-    
-    #allevents{
+    height: 100%;
+    width: 100%;
+
+    #home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #login {
+      width: 100%;
+      height: 100%;
+      background-color: #f39440;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #231f42;
+      }
+      .input-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &:last-child{
+          margin-top: 1.3rem;
+        }
+        
+
+        .input {
+          text-align: center;
+          padding: 1rem;
+          border:#231f42 solid 2px;
+          
+         
+        }
+      }
+    }
+    #allevents {
       margin-top: 3rem;
+    }
+    #info-ticket {
+      height: 100%;
+
+      .message {
+        text-align: center;
+      }
+      .name {
+        width: 281px;
+        height: 43px;
+        font-family: Sansita One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 41px;
+        text-align: center;
+        color: #f56b9a;
+      }
+      .time {
+        width: 284px;
+        height: 25px;
+        font-family: Fira Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 23px;
+        text-align: center;
+        color: #37aeab;
+      }
+      .location {
+        width: 272px;
+        height: 37px;
+        font-family: Fira Sans;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+      }
+      .price {
+        width: 145px;
+        height: 50px;
+        text-align: center;
+        font-family: Fira Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 38px;
+        color: #ffffff;
+        text-shadow: 1px 1px 0px #f56b9a;
+        margin: auto;
+      }
+      .buy-ticket {
+        width: 310px;
+        height: 60px;
+        background: #37aeab;
+        border-radius: 3px;
+        position: fixed;
+      }
+    }
+    #ticket {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        0deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(245, 107, 154, 1) 100%
+      );
+
+      .content {
+        min-height: calc(100vh - 300px);
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .location {
+          width: 100%;
+          background: rgb(202, 202, 202);
+        }
+        .time {
+          width: 100%;
+          background: rgb(187, 187, 187);
+        }
+        .ticket {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: rgba(204, 201, 201, 0.671);
+          width: 100%;
+          .barcode {
+            font-family: Libre Barcode 128;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 101px;
+            line-height: 101px;
+            text-align: center;
+            margin: 0 10px;
+            img {
+              width: 211px;
+              height: 60px;
+            }
+            .ticket-number {
+              height: 20px;
+              font-family: Fira Sans;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 12px;
+              line-height: 14px;
+              letter-spacing: 0.3em;
+              color: rgba(0, 0, 0, 0.4);
+            }
+          }
+        }
+      }
+      .go-back {
+        width: 310px;
+        height: 60px;
+        background: #37aeab;
+        border-radius: 3px;
+      }
     }
   }
 }
