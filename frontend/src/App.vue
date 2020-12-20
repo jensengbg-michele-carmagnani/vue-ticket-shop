@@ -13,6 +13,7 @@ export default {
 
   beforeMount() {
     this.$store.dispatch('fetchEvents')
+    this.$state.dispatch('checkState')
   },
   computed: {
     allEvents(){

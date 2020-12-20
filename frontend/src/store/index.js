@@ -9,6 +9,7 @@ export default new Vuex.Store({
     url: "http://localhost:3000",
     allEvents: Array,
     ticketObj: Object,
+    user = Object,
   },
   mutations: {
     showEvents(state, data) {
@@ -21,6 +22,12 @@ export default new Vuex.Store({
     cleanTicket(state) {
       state.ticketObj = {};
     },
+    resetUser(state){
+      state.user = {}
+    },
+    setUser(state,userInfo){
+      state.user = userInfo
+    }
   },
   actions: {
     async fetchEvents(ctx) {
@@ -32,6 +39,11 @@ export default new Vuex.Store({
         console.log("error", error);
       }
     },
+    async checkState(ctx){
+      if(sessionStorage.getItem('userInfo') !== null){
+        ctx.commit('setUser', JSON.parse(sessionStorage.getItem('userInfo')))
+      }
+    },
     async buyTicket(ctx, data) {
       try {
         let ticket = await ax.post(`${ctx.state.url}/ticket`, data);
@@ -41,6 +53,23 @@ export default new Vuex.Store({
         console.log("Error form db ticket", error);
       }
     },
+    async login(ctx, userInfo){
+      try {
+        let data = await ax.post(`${ctx.state.url}/login`,{userInfo});
+        console.log('data login from db', data)
+
+        if (data.data.success){
+          ctx.commit('emptyUser');
+          ctx.commit('setUser', data.data)
+        }else{
+          alert('The email does not exist')
+        }
+        console.log('info')
+        ctx.commit('setUser', data)
+      } catch (error) {
+        console.log('login error something went wrong',error)
+      }
+    }
   },
   modules: {},
   getters: {

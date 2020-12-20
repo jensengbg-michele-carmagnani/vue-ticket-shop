@@ -8,8 +8,8 @@
         <h2 class="staff"> Staff</h2>
     </article>
     <article class="input-login">
-     <input class="input" type="text " placeholder="username">
-      <input class="input" type="password" placeholder="password ">
+     <input class="input" v-model="loginInfo.username" type="text " placeholder="username">
+      <input class="input" v-model="loginInfo.password" type="password" placeholder="password ">
     
     </article>
 
@@ -19,7 +19,20 @@
 <script>
 export default {
   name:'Login',
+ data(){
+   return{
+     loginInfo:{
+       username:"",
+       password:""
+     }
+   }
+ },
 
+ methods: {
+   login(){
+     this.$store.dispach('login', loginInfo)
+   }
+ },
 }
 </script>
 
