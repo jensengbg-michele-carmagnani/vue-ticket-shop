@@ -1,8 +1,8 @@
 <template>
- <section class="allevents">
+ <section id="allevents">
    <Event v-for="(event, index) in allEvents" :key="index" :singleEvent="event" @click.prevent="goTo" />
  </section>
-</template>x
+</template>
 
 <script>
 // @ is an alias to /src

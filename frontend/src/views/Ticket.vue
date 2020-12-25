@@ -1,13 +1,25 @@
 <template>
-  <section class="ticket">  
-     <p class="message">You are about to score <br> some tickets to</p>
+  <section id="ticket">  
+      <section class="content">
+        
+        <article class="location">
+           <p class="location">@{{ticket.location}}</p>
         <p class="name">name:{{ticket.name}}</p>
-        <p class="time">time:{{ticket.time}}</p>
-        <p class="location">@{{ticket.location}}</p>
-        <p class="price">€{{ticket.price}}</p>
-        <p class="price">date prochouse: {{ticket.date}}</p>
-        <p class="ticket-number">ticket number: {{ticket.ticketNumber}}</p>
-      <button class="goBack" @click="goBack()">goBack</button>
+        </article>
+        <article class="time">
+            <p class="time">time:{{ticket.time}}</p>
+            <p class="price">date prochouse: {{ticket.date}}</p>
+         </article>
+        <article class="ticket">
+          <figure class="barcode">
+            <img src="../assets/barcode.png" alt="">
+          </figure>
+        <p class="ticket-number"> {{ticket.ticketNumber}}</p>
+        </article>
+      </section>
+      
+      <button class="go-back" @click="goBack()">goBack</button>
+    
 
 
   </section>
@@ -28,7 +40,7 @@ export default {
 
     goBack(){
       this.$store.commit('cleanTicket')
-      this.$router.push('/allevents')
+      this.$router.push('/')
       
     },
    

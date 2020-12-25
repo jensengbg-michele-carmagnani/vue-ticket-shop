@@ -1,11 +1,17 @@
 <template>
-  <section id="display-ticket" >
+  <section id="info-ticket" >
+      <article class="message">
         <p class="message">You are about to score <br> some tickets to</p>
-        <p class="name">name:{{infoEvent.name}}</p>
-        <span class="time">time:{{infoEvent.timeIn}}</span>
+      </article>
+        <p class="name">{{infoEvent.name}}</p>
+
+      <article class="time">
+        <span>Event's time : {{infoEvent.timeIn}}</span>-<span>{{infoEvent.timeOut}}</span>
+      </article>
         <p class="location">@{{infoEvent.location}}</p>
         <p class="price">€{{infoEvent.price}}</p>
-         <button class="buy-ticket" id="buy" @click="buyTicket(infoEvent)">Buy it</button>
+      <button class="buy-ticket" id="buy" @click="buyTicket(infoEvent)">Buy it</button>
+        
 
   </section>
 </template>

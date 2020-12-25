@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-          <router-link to="/">Home</router-link>|
-      <router-link to="/allevents">Concert </router-link>
+      <!-- <router-link to="/">Home</router-link>|
+      <router-link to="/allevents">Concert </router-link> -->
     </div>
     <router-view :allEvents="allEvents"/>
   </div>
@@ -13,6 +13,7 @@ export default {
 
   beforeMount() {
     this.$store.dispatch('fetchEvents')
+    this.$state.dispatch('checkState')
   },
   computed: {
     allEvents(){
@@ -24,8 +25,7 @@ export default {
 export def
 
 <style lang="scss">
-body{
-  background: #eee;
-}
+  
+  @import "./scss/main";
 
 </style>
