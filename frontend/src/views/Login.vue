@@ -10,8 +10,8 @@
     <article class="input-login">
      <input class="input" v-model="loginInfo.username" type="text " placeholder="username">
       <input class="input" v-model="loginInfo.password" type="password" placeholder="password ">
-    
     </article>
+      <button class="login" @click="login(loginInfo)">Login</button>
 
   </section>
 </template>
@@ -30,7 +30,7 @@ export default {
 
  methods: {
    login(loginInfo){
-     this.$store.dispach('login', loginInfo)
+     this.$store.dispatch('login', loginInfo)
    }
  },
 }
