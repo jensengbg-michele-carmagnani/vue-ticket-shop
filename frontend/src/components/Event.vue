@@ -1,13 +1,16 @@
 <template>
-  <article id="info" @click="goTo(singleEvent.id)">
+  <article id="event" @click="goTo(singleEvent.id)">
     
-        
-        <p class="name">Singer {{singleEvent.name}}</p>
-        <span class="time">Time {{singleEvent.time}}</span>
-        <p class="location">@{{singleEvent.location}}</p>
-        <p class="price">Price{{singleEvent.price}}</p>
-        <p class="price">id {{singleEvent.id}}</p>
-       
+        <section class="data">
+           <p class="position date"> <span>{{singleEvent.date}}</span></p>
+        </section>
+        <section class="info">
+              <p class="position name"><span>Name</span> <span>{{singleEvent.name}}</span></p>
+              <p class="position time"><span>Time:</span> <span>{{singleEvent.timeIn}}</span></p>
+              <p class="position location"><span>@</span><span>{{singleEvent.location}}</span></p>
+              <p class="position price"><span>Price</span><span>{{singleEvent.price}}</span></p>
+              
+        </section>
       
    
   </article>
@@ -36,10 +39,7 @@ computed: {
 </script>
 
 <style lang="scss">
-  #info{
-    border: black solid 1px;
-    
-  }
+  
  
 </style>>
 
