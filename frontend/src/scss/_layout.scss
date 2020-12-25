@@ -44,15 +44,16 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        &:last-child{
-          margin-top: 1.3rem;
-        }
+        
         
 
         .input {
           text-align: center;
           padding: 1rem;
           border:#231f42 solid 2px;
+          &:last-child{
+            margin-top: 3rem;
+          } 
           
          
         }

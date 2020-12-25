@@ -9,7 +9,7 @@ export default new Vuex.Store({
     url: "http://localhost:3000",
     allEvents: Array,
     ticketObj: Object,
-    user = Object,
+    user : Object,
   },
   mutations: {
     showEvents(state, data) {

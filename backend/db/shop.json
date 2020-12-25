@@ -313,6 +313,16 @@
       "price": "150€",
       "data": "2020-12-20",
       "ticketNumber": "45009a9f-6541-4e4d-9eba-2d93accaa14d"
+    },
+    {
+      "name": "Vasco Rossi",
+      "location": "verona",
+      "date": "Nov 11",
+      "from": "20",
+      "to": "23",
+      "price": "150€",
+      "data": "2020-12-25",
+      "ticketNumber": "eb8fff8c-1946-4d1f-8e50-3e390ac76754"
     }
   ]
 }

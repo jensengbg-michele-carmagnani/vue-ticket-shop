@@ -29,7 +29,7 @@ export default {
  },
 
  methods: {
-   login(){
+   login(loginInfo){
      this.$store.dispach('login', loginInfo)
    }
  },
