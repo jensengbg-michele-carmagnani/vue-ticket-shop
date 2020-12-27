@@ -8,13 +8,16 @@ app.use(bodyParser.json());
 // Routes
 const eventsRoute = require("./routes/events");
 const ticketRoute = require("./routes/ticket");
-
+const loginRoute  = require("./routes/login");
 //corse
 app.use(cors());
 // route events
 app.use("/events", eventsRoute);
 // route to buy ticket
 app.use("/ticket", ticketRoute);
+// rout to login
+app.use("/login", loginRoute);
+
 
 const port = process.env.PORT || 3000;
 

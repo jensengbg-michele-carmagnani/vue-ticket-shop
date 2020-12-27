@@ -53,9 +53,9 @@ export default new Vuex.Store({
         console.log("Error form db ticket", error);
       }
     },
-    async login(ctx, userInfo){
+    async login(ctx, loginInfo){
       try {
-        let data = await ax.post(`${ctx.state.url}/login`,{userInfo});
+        let data = await ax.post(`${ctx.state.url}/login`,loginInfo);
         console.log('data login from db', data)
 
         if (data.data.success){

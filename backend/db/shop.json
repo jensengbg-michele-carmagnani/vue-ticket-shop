@@ -98,7 +98,45 @@
   ],
   "stuff": [],
   "tickets": [
-
- 
+    {
+      "data": "2020-12-25",
+      "ticketNumber": "9de50afd-4f81-4758-925e-5500e1302769"
+    },
+    {
+      "data": "2020-12-25",
+      "ticketNumber": "839c3a8d-3657-4fdf-8fea-ab0dfb26d63a"
+    },
+    {
+      "data": "2020-12-26",
+      "ticketNumber": "e666d726-32e0-410e-b3bf-51c8e2cac6ca"
+    },
+    {
+      "name": "Magnus Uggla",
+      "location": "Götebr",
+      "date": "Dic 16",
+      "from": "23:00",
+      "to": "2:00",
+      "price": "1200sek",
+      "data": "2020-12-26",
+      "ticketNumber": "6af0d171-b5d0-46aa-9b81-b7969b65506c"
+    },
+    {
+      "name": "Cindy Loper",
+      "location": "Milan",
+      "date": "Sep 13",
+      "from": "19:00",
+      "to": "23:00",
+      "price": "56€",
+      "data": "2020-12-26",
+      "ticketNumber": "af4dccf3-aa72-4108-a3da-0df81a9841d7"
+    },
+    {
+      "data": "2020-12-26",
+      "ticketNumber": "f5de56d8-1dc6-4287-9935-a0c2007c42fd"
+    },
+    {
+      "data": "2020-12-26",
+      "ticketNumber": "63b54b78-98f2-4faa-abe9-1fd05becf7a8"
+    }
   ]
 }
