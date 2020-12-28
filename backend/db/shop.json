@@ -96,7 +96,16 @@
       "id": 1
     }
   ],
-  "stuff": [],
+  "stuff": [
+    {
+      "username": "michele",
+      "password": "$2b$10$DRhAZBH03ccxT0E0wgj23u9dZbYlXkGMp2M7HcwSfP97aWgXri9wW"
+    },
+    {
+      "username": "marco",
+      "password": "$2b$10$.j/ou/.wwakHy/sKC6SLYOA8Yi0RQNGRuI61UvzdNrKh8d/MXxFa6"
+    }
+  ],
   "tickets": [
     {
       "data": "2020-12-25",
@@ -137,6 +146,36 @@
     {
       "data": "2020-12-26",
       "ticketNumber": "63b54b78-98f2-4faa-abe9-1fd05becf7a8"
+    },
+    {
+      "name": "Magnus Uggla",
+      "location": "Götebr",
+      "date": "Dic 16",
+      "from": "23:00",
+      "to": "2:00",
+      "price": "1200sek",
+      "data": "2020-12-27",
+      "ticketNumber": "4c4bda61-d963-4ad6-ba0b-2f740e3ec426"
+    },
+    {
+      "name": "Vasco Rossi",
+      "location": "verona",
+      "date": "Nov 11",
+      "from": "20",
+      "to": "23",
+      "price": "150€",
+      "data": "2020-12-28",
+      "ticketNumber": "093820b3-e3f1-4228-bd23-b5046d68de20"
+    },
+    {
+      "name": "Magnus Uggla",
+      "location": "Götebr",
+      "date": "Dic 16",
+      "from": "23:00",
+      "to": "2:00",
+      "price": "1200sek",
+      "data": "2020-12-28",
+      "ticketNumber": "2026ba68-e3c4-43f4-9a1b-5bb83e510b66"
     }
   ]
 }

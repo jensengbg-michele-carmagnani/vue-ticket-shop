@@ -9,7 +9,8 @@ export default new Vuex.Store({
     url: "http://localhost:3000",
     allEvents: Array,
     ticketObj: Object,
-    user : Object,
+    user: Object,
+    token: Object,
   },
   mutations: {
     showEvents(state, data) {
@@ -22,12 +23,12 @@ export default new Vuex.Store({
     cleanTicket(state) {
       state.ticketObj = {};
     },
-    resetUser(state){
-      state.user = {}
+    resetUser(state) {
+      state.user = {};
     },
-    setUser(state,userInfo){
-      state.user = userInfo
-    }
+    setUser(state, userInfo) {
+      state.user = userInfo;
+    },
   },
   actions: {
     async fetchEvents(ctx) {
@@ -39,9 +40,9 @@ export default new Vuex.Store({
         console.log("error", error);
       }
     },
-    async checkState(ctx){
-      if(sessionStorage.getItem('userInfo') !== null){
-        ctx.commit('setUser', JSON.parse(sessionStorage.getItem('userInfo')))
+    async checkState(ctx) {
+      if (sessionStorage.getItem("userInfo") !== null) {
+        ctx.commit("setUser");
       }
     },
     async buyTicket(ctx, data) {
@@ -53,28 +54,30 @@ export default new Vuex.Store({
         console.log("Error form db ticket", error);
       }
     },
-    async login(ctx, loginInfo){
+    async login(ctx, loginInfo) {
       try {
-        let data = await ax.post(`${ctx.state.url}/login`,loginInfo);
-        console.log('data login from db', data)
+        let userInfo = await ax.post(`${ctx.state.url}/login`, loginInfo);
+        console.log("data login from db", userInfo.data.succces);
 
-        if (data.data.success){
-          ctx.commit('emptyUser');
-          ctx.commit('setUser', data.data)
-        }else{
-          alert('The email does not exist')
+        if (userInfo.data.succes) {
+          ctx.commit("resetUser");
+          //set session
+          sessionStorage.setItem("userInfo", JSON.stringify(userInfo.data));
+          //set user info
+          ctx.commit("setUser", userInfo.data);
+          
+        } else {
+          alert("Password or username not correct");
         }
-        console.log('info')
-        ctx.commit('setUser', data)
       } catch (error) {
-        console.log('login error something went wrong',error)
+        console.log("Something went wrong", error);
       }
-    }
+    },
   },
   modules: {},
   getters: {
     ticket(state) {
-      return state.ticketObj
+      return state.ticketObj;
     },
     concertsCount(state) {
       return state.allEvents.length;
