@@ -11,8 +11,7 @@
      <input class="input" v-model="loginInfo.username" type="text " placeholder="username">
       <input class="input" v-model="loginInfo.password" type="password" placeholder="password ">
     </article>
-      <button class="login" @click="login(loginInfo)">Login</button>
-
+      <button class="btnLogin" @click="login(loginInfo)">Login</button>
   </section>
 </template>
 
@@ -24,15 +23,47 @@ export default {
      loginInfo:{
        username:"",
        password:""
+     },
+     userRole:{
+       role:""
      }
    }
  },
 
  methods: {
-   login(loginInfo){
-     this.$store.dispatch('login',loginInfo)
-   }
+   async login(loginInfo){
+    await this.$store.dispatch('login',loginInfo)
+      
+      // let role = sessionStorage.getItem('userInfo');
+      
+
+       console.log('role',  this.role)
+        if(this.role =='admin'){
+          this.getToAdmin()
+        }else{
+          this.getToTicketCheck()
+        }
+        
+       
+      },
+    getToAdmin(){
+    this.$router.push('/admin')
+    },
+    getToTicketCheck(){
+      this.$router.push('/ticketCheck')
+    },
+    
+    
+
+ 
  },
+ computed:{
+   role(){
+        let role = this.$store.getters.getUserRole
+        return role
+   }
+ }
+ 
 }
 </script>
 

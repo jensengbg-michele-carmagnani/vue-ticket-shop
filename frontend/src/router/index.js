@@ -31,6 +31,16 @@ const routes = [
     name: "Ticket",
     component: () => import("@/views/Ticket.vue"),
   },
+  {
+    path: "/ticketcheck",
+    name: "TicketCheck",
+    component: () => import("@/views/TicketCheck.vue"),
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: () => import("@/views/Admin.vue"),
+  },
 ];
 
 const router = new VueRouter({

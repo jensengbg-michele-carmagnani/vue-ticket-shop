@@ -41,8 +41,10 @@ export default new Vuex.Store({
       }
     },
     async checkState(ctx) {
-      if (sessionStorage.getItem("userInfo") !== null) {
-        ctx.commit("setUser");
+      const user = sessionStorage.getItem("userInfo")
+      if ( user !== null) {
+        ctx.commit("setUser", user);
+        
       }
     },
     async buyTicket(ctx, data) {
@@ -54,10 +56,10 @@ export default new Vuex.Store({
         console.log("Error form db ticket", error);
       }
     },
-    async login(ctx, loginInfo) {
+    async login(ctx,loginInfo) {
       try {
-        let userInfo = await ax.post(`${ctx.state.url}/login`, loginInfo);
-        console.log("data login from db", userInfo.data.succces);
+        let userInfo = await ax.post(`${ctx.state.url}/login`,loginInfo);
+        console.log("data login from db", userInfo.data.succes);
 
         if (userInfo.data.succes) {
           ctx.commit("resetUser");
@@ -65,6 +67,7 @@ export default new Vuex.Store({
           sessionStorage.setItem("userInfo", JSON.stringify(userInfo.data));
           //set user info
           ctx.commit("setUser", userInfo.data);
+
           
         } else {
           alert("Password or username not correct");
@@ -85,5 +88,8 @@ export default new Vuex.Store({
     ticketNumber(state) {
       return state.ticketObj;
     },
+    getUserRole(state) {
+      return state.user.role
+    }
   },
 });

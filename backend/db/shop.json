@@ -99,11 +99,13 @@
   "stuff": [
     {
       "username": "michele",
-      "password": "$2b$10$DRhAZBH03ccxT0E0wgj23u9dZbYlXkGMp2M7HcwSfP97aWgXri9wW"
+      "password": "$2b$10$DRhAZBH03ccxT0E0wgj23u9dZbYlXkGMp2M7HcwSfP97aWgXri9wW",
+      "role": "admin"
     },
     {
       "username": "marco",
-      "password": "$2b$10$.j/ou/.wwakHy/sKC6SLYOA8Yi0RQNGRuI61UvzdNrKh8d/MXxFa6"
+      "password": "$2b$10$.j/ou/.wwakHy/sKC6SLYOA8Yi0RQNGRuI61UvzdNrKh8d/MXxFa6",
+      "role": "stuff"
     }
   ],
   "tickets": [
@@ -176,6 +178,16 @@
       "price": "1200sek",
       "data": "2020-12-28",
       "ticketNumber": "2026ba68-e3c4-43f4-9a1b-5bb83e510b66"
+    },
+    {
+      "name": "Cindy Loper",
+      "location": "Milan",
+      "date": "Sep 13",
+      "from": "19:00",
+      "to": "23:00",
+      "price": "56€",
+      "data": "2020-12-30",
+      "ticketNumber": "7ac7ff0b-6406-4050-b67b-49f78e1690e1"
     }
   ]
 }

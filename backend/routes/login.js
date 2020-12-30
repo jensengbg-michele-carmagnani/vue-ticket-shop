@@ -20,6 +20,7 @@ router.post("/", async (req, res) => {
     let token = jwt.sign({ uuid: user.uuid }, "secrets", { expiresIn: 200 });
     resObj.token = token;
     resObj.succes = true;
+    resObj.role = user.role
   }
 
   console.log("user login", resObj);

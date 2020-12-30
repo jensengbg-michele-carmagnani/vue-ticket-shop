@@ -44,19 +44,29 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
-        
 
         .input {
           text-align: center;
           padding: 1rem;
-          border:#231f42 solid 2px;
-          &:last-child{
+          border: #231f42 solid 2px;
+          &:last-child {
             margin-top: 3rem;
-          } 
-          
-         
+          }
         }
+      }
+      .btnLogin {
+        color: #fff;
+        margin-top: 2rem;
+        width: 200px;
+        height: 60px;
+        background: #231f42;
+        border-radius: 0px 0px 3px 3px;
+        font-family: Fira Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
       }
     }
     #allevents {
